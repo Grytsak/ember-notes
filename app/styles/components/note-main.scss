@@ -1,0 +1,31 @@
+/* Common */
+.note-main {
+  max-width: calc(100vw - 604px);
+  width: 100%;
+}
+
+.note-main__title {
+  font-size: 20px;
+  margin: 10px 10px 30px;
+}
+/* Common end*/
+
+
+
+/* Editor */
+.froala-editor-container {
+  width: 100%;
+}
+
+.froala-editor-instance {
+  width: 100%;
+}
+
+.fr-wrapper {
+  height: calc(100vh - 82px);
+}
+
+.fr-toolbar.fr-top {
+  border: none;
+}
+/* Editor end */
