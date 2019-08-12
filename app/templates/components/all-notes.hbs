@@ -4,6 +4,10 @@
 </div>
 
 <div class="all-notes__notes-container">
+    {{#each notes as |note|}}
+        {{notes-all note=note}}
+    {{/each}}
+    <!--
     <div class="all-notes__note">
         <p class="all-notes__note-title">Title</p>
         <p class="all-notes__note-text">Text</p>
@@ -44,5 +48,6 @@
         <p class="all-notes__note-text">Text</p>
         <p class="all-notes__note-data">5 minutes ago</p>
     </div>
+    -->
 </div>
 

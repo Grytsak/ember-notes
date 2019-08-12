@@ -13,11 +13,19 @@ export default Service.extend({
 
     createNote() {
 
-      this.store.createRecord('note', {
+      let newNote = this.store.createRecord('note', {
         title: 'test title',
         body: 'test body',
         date: new Date()
       });
+
+      this.store.pushPayload({notes: [
+        {
+          title: 'test title',
+          body: 'test body',
+          date: new Date()
+        }
+      ]});
 
     },
 
