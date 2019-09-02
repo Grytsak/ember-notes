@@ -19,13 +19,8 @@ export default Service.extend({
         date: new Date()
       });
 
-      this.store.pushPayload({notes: [
-        {
-          title: 'test title',
-          body: 'test body',
-          date: new Date()
-        }
-      ]});
+        newNote.save();
+
 
     },
 
