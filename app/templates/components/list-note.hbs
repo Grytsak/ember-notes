@@ -1,0 +1,13 @@
+<div class="all-notes__note">
+    {{#unless note.title}}
+        <p class="all-notes__note-title">Untitled</p>
+    {{/unless}}
+    <p class="all-notes__note-title">{{note.title}}</p>
+    {{#unless note.body}}
+        <p class="all-notes__note-text">Default text</p>
+    {{/unless}}
+    <!--<p class="all-notes__note-text">{{note.body}}</p>-->
+    <p class="all-notes__note-text">{{string-limit note.body limit=25}}</p>
+    <p class="all-notes__note-data">{{note.date}}</p>
+    <button class="btn btn-danger" {{action "deleteNote"}}>Delete</button>
+</div>

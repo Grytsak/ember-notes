@@ -7,3 +7,12 @@ html {
   display: flex;
   flex-wrap: wrap;
 }
+
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+a:hover {
+  text-decoration: none !important;
+}

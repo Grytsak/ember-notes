@@ -1,6 +1,12 @@
-<h2 class="note-main__title">Note Title</h2>
-{{input}}
+<div class="note-main__top-container">
+    <h2 class="note-main__title">{{noteTitle}}</h2>
+    {{#unless noteTitle}}
+        <h2 class="note-main__title">Note Title</h2>
+    {{/unless}}
+</div>
+{{input value=noteTitle key-up=(action "updateNoteTitle")}}
 
 {{froala-editor
-        on-keydown-getHtml=(action "showText")
+        content=noteBody update=(action (mut noteBody))
+        on-keyup-getHtml=(action "updateNoteBody")
 }}

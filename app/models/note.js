@@ -9,7 +9,7 @@ export default DS.Model.extend({
   body: attr('string'),
   date: attr('string', {
     defaultValue() {
-      return new Date();
+      return new Date(Date.now()).toLocaleString();
     }
   })
 });

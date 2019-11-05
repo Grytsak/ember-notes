@@ -24,13 +24,14 @@
     font-size: 13px;
   }
 
-  .all-notes__notes-container {
+  .all-notes__notes-containeember sr {
     width: 100%;
     height: calc(100vh - 112px);
     overflow: auto;
   }
 
   .all-notes__note {
+    width: 100%;
     border-bottom: 1px solid $notes-main-gray-color;
     cursor: pointer;
     padding: 20px;

@@ -2,20 +2,25 @@ import Component from '@ember/component';
 import Ember from 'ember';
 
 const {
-	inject: {service},
-	get
+    inject: {service},
 } = Ember;
 
 export default Component.extend({
-	note: service(),
-	classNames: ['notes-sidebar'],
-	tagName: 'aside',
+    store: service(),
 
-	actions: {
-		addNewNote() {
-			let note = get(this, 'note');
-      note.createNote();
-		}
-	}
+    classNames: ['notes-sidebar'],
+    tagName: 'aside',
+
+    actions: {
+        addNewNote() {
+            let newNote = this.store.createRecord('note', {
+                title: this.get('noteTitle'),
+                body: this.get('noteBody'),
+                date: new Date(Date.now()).toLocaleString()
+            });
+
+            newNote.save();
+        }
+    }
 });
 
